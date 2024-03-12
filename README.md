@@ -49,6 +49,6 @@ To run the backend locally, follow these steps:
 The backend server should now be running locally on your machine.
 
 ## About ThesesVault
-ThesesVault is a platform aimed at facilitating access to and exploration of academic research across various fields. It provides links to detailed PDFs sourced from ShodhGanga and other reputable sources, making valuable research materials easily accessible to scholars, researchers, students, and enthusiasts alike.
+ThesesVault is a platform aimed at facilitating access to and exploration of academic research across various fields. It provides links to detailed PDFs sourced from ShodhGanga , making valuable research materials easily accessible to scholars, researchers, students, and enthusiasts alike.
 
 For more information about the ThesesVault project, please refer to the respective README files in the frontend and backend directories.      
