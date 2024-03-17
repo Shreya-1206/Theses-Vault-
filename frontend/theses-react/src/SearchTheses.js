@@ -36,7 +36,7 @@ const ThesisData= () => {
    const handleGo = async() => {
       
       setLoading(true);
-      fetch('http://localhost:4000/get-thesis-data',{
+      fetch('https://theses-vault-3.onrender.com/get-thesis-data',{
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const ThesisData= () => {
          clickedtAt: new Date().toLocaleString()
       };
       console.log(clickData);
-      fetch("http://localhost:4000/get-thesis-data/clicked-history", {
+      fetch("https://theses-vault-3.onrender.com/get-thesis-data/clicked-history", {
          method:"POST",
          headers:{
             'Content-Type': 'application/json',

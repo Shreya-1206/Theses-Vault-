@@ -17,7 +17,7 @@ const Login = () => {
         if(loginDetails.email === "" || loginDetails.password === ""){
             setErrorMessage("All fields are required.");
         } else {
-          fetch('http://localhost:4000/login', {
+          fetch('https://theses-vault-3.onrender.com/login', {
             method : "POST",
             headers : { 
               'Content-Type': 'application/json'

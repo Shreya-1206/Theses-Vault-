@@ -11,7 +11,7 @@ const Contact = () => {
         let contactDetails = {name, email, subject, message};
         console.log(contactDetails);
 
-        fetch('http://localhost:4000/contact' ,{
+        fetch('https://theses-vault-3.onrender.com/contact' ,{
                     method:"POST",
                     headers:{'Content-Type':"application/json"},
                     body:JSON.stringify(contactDetails)

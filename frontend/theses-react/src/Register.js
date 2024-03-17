@@ -36,7 +36,7 @@ const Register = () => {
             if(validateInput()) {
                 const registrationDetails = {name, email, password, confirmPassword} ;
                  console.log(registrationDetails);
-                 fetch('http://localhost:4000/register' ,{
+                 fetch('https://theses-vault-3.onrender.com/register' ,{
                     method:"POST",
                     headers:{'Content-Type':"application/json"},
                     

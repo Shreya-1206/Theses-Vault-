@@ -7,7 +7,7 @@ const UserHistory = () => {
    
    
    const handleDelete = (id) => {
-    fetch(`http://localhost:4000/get-thesis-data/clicked-history/${id}`,{
+    fetch(`https://theses-vault-3.onrender.com/get-thesis-data/clicked-history/${id}`,{
         method:'DELETE',
         headers:{ 'Content-Type': 'application/json' },
     })
@@ -35,10 +35,10 @@ const UserHistory = () => {
     //     const userId = JSON.parse(getUserId);
     //     console.log(userId.user.id);
     // }
-    console.log(`http://localhost:4000/get-thesis-data/clicked-history?userId=${userData.user.id}`);
+    console.log(`https://theses-vault-3.onrender.com/get-thesis-data/clicked-history?userId=${userData.user.id}`);
     setPending(true);
     
-    fetch(`http://localhost:4000/get-thesis-data/clicked-history?userId=${userData.user.id}`, {
+    fetch(`https://theses-vault-3.onrender.com/get-thesis-data/clicked-history?userId=${userData.user.id}`, {
         method :'GET'  ,
         headers:{ 'Content-Type': 'application/json' },
     })
