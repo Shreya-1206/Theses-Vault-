@@ -13,15 +13,24 @@ const ThesisData= () => {
     const [isLoggedOut ,  setIsLoggedOut]= useState(false);
     const history = useHistory();
 
-    ( () => {
-      const getuserDetails = localStorage.getItem("userData");
-      if ( !getuserDetails) {
-        history.push('/');
-      }else {
-          history.push('/get-thesis-data');
-      }
-   })();
+   //  ( () => {
+   //    const getuserDetails = localStorage.getItem("userData");
+   //    if ( !getuserDetails) {
+   //      history.push('/');
+   //    }else {
+   //        history.push('/get-thesis-data');
+   //    }
+   // })();
    
+   useEffect(() => {
+      const getuserDetails = localStorage.getItem("userData");
+      if (!getuserDetails) {
+        history.push('/');
+      } else {
+        history.push('/get-thesis-data');
+      }
+    }, [history]);
+    
     useEffect(() => {
       
       const storedUserData = localStorage.getItem('userData');
