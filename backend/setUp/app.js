@@ -213,8 +213,8 @@ app.post('/contact', async(req, res) => {
 });
 
 Promise.all([connectToDb()])
-  .then(() => app.listen(4000, () => (
-    "Server is runing on port 4000")))
+  .then(() => app.listen(port, () => (
+    `Server is runing on port ${port}`)))
   .catch(error => {
     console.error(`Mongo Atlas Error : ` +error)
     process.exit();

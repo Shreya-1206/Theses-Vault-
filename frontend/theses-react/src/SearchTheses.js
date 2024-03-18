@@ -30,7 +30,7 @@ const ThesisData= () => {
         history.push('/get-thesis-data');
       }
     }, [history]);
-    
+
     useEffect(() => {
       
       const storedUserData = localStorage.getItem('userData');
@@ -113,7 +113,7 @@ const ThesisData= () => {
       <div className="container">
             <div className = "flex-box">
             <h2 className="first-box welcome-user">
-                Welcome {userData ? userData.name : "User"}   &#x1F338;; !
+                Welcome {userData ? userData.name : "User"}   &#x1F338; !
             </h2>
             <div className="first-box btn-history">
                 <Link to="/get-thesis-data/clicked-history">
