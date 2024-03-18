@@ -212,10 +212,24 @@ app.post('/contact', async(req, res) => {
     
 });
 
+// Promise.all([connectToDb()])
+    
+//   .then(() =>
+//   app.listen(port, () => (
+//     `Server is runing on port ${port}`)))
+//   .catch(error => {
+//     console.error(`Mongo Atlas Error : ` +error)
+//     process.exit();
+//   })  
+
 Promise.all([connectToDb()])
-  .then(() => app.listen(port, () => (
-    `Server is runing on port ${port}`)))
+  .then(() => {
+    const port = process.env.PORT || 4000;
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  })
   .catch(error => {
-    console.error(`Mongo Atlas Error : ` +error)
-    process.exit();
-  })  
+    console.error(`Mongo Atlas Error: ${error}`);
+    process.exit(1); 
+  });
